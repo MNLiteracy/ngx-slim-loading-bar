@@ -1,5 +1,5 @@
-# Angular 2 Slim Loading Bar [![npm version](https://img.shields.io/npm/v/ng2-slim-loading-bar.svg)](https://www.npmjs.com/package/ng2-slim-loading-bar) [![npm monthly downloads](https://img.shields.io/npm/dm/ng2-slim-loading-bar.svg?style=flat-square)](https://www.npmjs.com/package/ng2-slim-loading-bar)
-Angular2 component shows slim loading bar at the top of the page of your application.
+# Angular Slim Loading Bar [![npm version](https://img.shields.io/npm/v/ng2-slim-loading-bar.svg)](https://www.npmjs.com/package/ng2-slim-loading-bar) [![npm monthly downloads](https://img.shields.io/npm/dm/ng2-slim-loading-bar.svg?style=flat-square)](https://www.npmjs.com/package/ng2-slim-loading-bar)
+Angular component shows slim loading bar at the top of the page of your application.
 
 [![Build Status](https://travis-ci.org/akserg/ng2-slim-loading-bar.svg?branch=master)](https://travis-ci.org/akserg/ng2-slim-loading-bar)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
@@ -15,11 +15,11 @@ _Some of these APIs and Components are not final and are subject to change!_
 ## Installation
 
 ```sh
-npm install ng2-slim-loading-bar --save
+npm install @cime/ngx-slim-loading-bar --save
 ```
 
 ## Demo
-Simple examples using ng2-slim-loading-bar:
+Simple examples using ngx-slim-loading-bar:
 - with SystemJS in [ng2-systemjs-demo](https://github.com/akserg/ng2-systemjs-demo)
 - with Webpack in [ng2-webpack-demo](https://github.com/akserg/ng2-webpack-demo)
 
@@ -32,14 +32,14 @@ If you use SystemJS to load your files, you might have to update your config:
 ```js
 System.config({
     map: {
-        'ng2-slim-loading-bar': 'node_modules/ng2-slim-loading-bar/bundles/index.umd.js'
+        '@cime/ngx-slim-loading-bar': 'node_modules/@cime/ngx-slim-loading-bar/bundles/index.umd.js'
     }
 });
 ```
 
 #### 1. Update the markup
 - Import the `style.css` file into your web page
-- Add `<ng2-slim-loading-bar></ng2-slim-loading-bar>` tag in template of your application component.
+- Add `<ngx-slim-loading-bar></ngx-slim-loading-bar>` tag in template of your application component.
 
 #### 2. Import the `SlimLoadingBarModule`
 Import `SlimLoadingBarModule.forRoot()` in the NgModule of your application.
@@ -48,7 +48,7 @@ The `forRoot` method is a convention for modules that provide a singleton servic
 ```ts
 import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from '@angular/core';
-import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
+import {SlimLoadingBarModule} from '@cime/ngx-slim-loading-bar';
 
 @NgModule({
     imports: [
@@ -77,11 +77,11 @@ export class SharedModule {
 ```
 
 #### 3. Use the `SlimLoadingBarService` for your application
-- Import `SlimLoadingBarService` from `ng2-slim-loading-bar` in your application code:
+- Import `SlimLoadingBarService` from `@cime/ngx-slim-loading-bar` in your application code:
 
 ```js
 import {Component} from '@angular/core';
-import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
+import {SlimLoadingBarService} from '@cime/ngx-slim-loading-bar';
 
 @Component({
     selector: 'app',
@@ -90,7 +90,7 @@ import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
         <button (click)="startLoading()">Start Loading</button>
         <button (click)="stopLoading()">Stop Loading</button>
         <button (click)="completeLoading()">Complete Loading</button>
-        <ng2-slim-loading-bar></ng2-slim-loading-bar>
+        <ngx-slim-loading-bar></ngx-slim-loading-bar>
     `
 })
 export class AppComponent {
@@ -114,13 +114,13 @@ export class AppComponent {
 ```
 
 #### 3. Customize the the `ng2-slim-loading-bar` for your application
-You can use the following properties to customize the `ng2-slim-loading-bar` component in your template:
+You can use the following properties to customize the `ngx-slim-loading-bar` component in your template:
 - `color` - The color of loading bar. Default is `firebrick`. It can be any CSS compatible value.
 - `height` - The height of loading bar. Default value is `2px`.
 - `show` - The flag helps hide and show the loading bar. Default value is `true`.
 
 Example: 
-`<ng2-slim-loading-bar color="blue" height="4px"></ng2-slim-loading-bar>`
+`<ngx-slim-loading-bar color="blue" height="4px"></ngx-slim-loading-bar>`
 
 #### 4. Manage the loading bar
 You can use the following properties to customize the SlimLoadingBar via instance of SlimLoadingBarService:

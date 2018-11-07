@@ -23,7 +23,7 @@ If the current behavior is a bug or you can illustrate your feature request bett
 
 **Please tell us about your environment:**
 
-* **ng2-slim-loading-bar version:** x.x.x
+* **@cime/ngx-slim-loading-bar version:** x.x.x
 
 * **Angular version:** 2.X.X
  
